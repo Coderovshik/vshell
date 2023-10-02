@@ -218,6 +218,14 @@ function VShell() {
             console.log(err.message);
         }
     }
+
+    this.test = () => {
+        this.printWorkingDirectory();
+        this.list();
+        this.list('subDir1');
+        this.changedirectory('subDir1');
+        this.concatenate('text1.txt');
+    }
 }
 
 const vs = new VShell();
